@@ -6,9 +6,11 @@ export default function Home() {
       <div className="mx-auto max-w-xl space-y-6">
         <header className="space-y-2">
           <h1 className="text-4xl font-bold">BoulderBase 🧗‍♀️</h1>
+
           <p className="text-lg text-gray-600">
             Beginner-friendly bouldering training and recovery planner.
           </p>
+
           <p className="text-sm text-gray-500">
             Supports colour-based grading (yellow → white). Current level:{" "}
             <span className="font-semibold">Green</span>.
@@ -18,23 +20,30 @@ export default function Home() {
         <section className="rounded-2xl border p-6 shadow-sm">
           <h2 className="text-xl font-semibold">Quick actions</h2>
 
-          <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <Link
+              href="/dashboard"
+              className="rounded-xl border px-4 py-3 text-center font-medium"
+            >
+              Dashboard
+            </Link>
+
             <Link
               href="/login-session"
-              className="rounded-xl bg-black px-4 py-2 text-white text-center"
+              className="rounded-xl bg-black px-4 py-3 text-center font-medium text-white"
             >
               Log Session
             </Link>
 
             <Link
               href="/sessions"
-              className="rounded-xl border px-4 py-2 text-center"
+              className="rounded-xl border px-4 py-3 text-center font-medium"
             >
               Session History
             </Link>
 
             <button
-              className="rounded-xl border px-4 py-2 opacity-50 cursor-not-allowed"
+              className="rounded-xl border px-4 py-3 text-center font-medium opacity-50 cursor-not-allowed"
               disabled
             >
               Generate Weekly Plan (soon)
@@ -42,7 +51,7 @@ export default function Home() {
           </div>
 
           <p className="mt-4 text-sm text-gray-500">
-            Next up: session history + beginner-safe rules engine.
+            Next up: recovery coach + beginner-safe rules engine.
           </p>
         </section>
       </div>
